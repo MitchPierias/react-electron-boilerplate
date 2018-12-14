@@ -38,6 +38,9 @@
     "files": [
       "**/*",
       "build/**/*",
+      "assets/**/*",
+      "!dist/**/*",
+      "!src/**/*",
       "node_modules/**/*"
     ]
   },
