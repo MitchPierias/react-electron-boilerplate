@@ -1,6 +1,8 @@
 # Reactron
 ## A Simplified Electron with React Boilerplate
 
+This is the source code for the article [The Dream Team - React with Electron](https://medium.com/@mitchpierias/the-dream-team-react-with-electron-c808ecb5b55e) on Medium.
+
 ### Usage
 > This will build for your current operating system.
 
