@@ -22,10 +22,11 @@ npm run-script dist
 ```
 
 ### Requirements
-- Node ^9.3.*
+- Node ^9.X.X
+- Electron ^3.X.X
 
 #### Babel
-- Babel-Core 6.3.*
-- Babel-Loader" 7.*.*
-- Babel-Preset-Env" 1.*.*
-- Babel-Preset-React 6.*.*
+- Babel-Core 6.3.X
+- Babel-Loader 7.X.X
+- Babel-Preset-Env 1.X.X
+- Babel-Preset-React 6.X.X
