@@ -3,6 +3,7 @@ node_modules
 # Production
 build
 dist
+assets/*
 # Misc
 .DS_Store
 .env.local

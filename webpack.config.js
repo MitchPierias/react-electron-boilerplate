@@ -8,6 +8,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
  * @note Some props are injected and some are configuration (rendering) settings
  */
 const htmlPlugin = new HtmlWebPackPlugin({
+	title: "Reactron",
 	template: "./src/index.html",
 	filename: "./index.html"
 });
@@ -18,10 +19,6 @@ const htmlPlugin = new HtmlWebPackPlugin({
 module.exports = {
 	entry: './src/index.js',
 	target: 'electron-renderer',
-	node: {
-		__dirname: false,
-		__filename: false
-	},
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		publicPath: './',

@@ -1,7 +1,9 @@
 # Reactron
-## Simplified Electron with React Project Template
+## A Simplified Electron with React Boilerplate
 
 ### Usage
+> This will build for your current operating system.
+
 Clone the repository into your working directory, then install the required dependencies;
 ```
 npm install
@@ -17,7 +19,11 @@ Build the Electron distribution;
 npm run-script dist
 ```
 
-> This will build for your current operating system.
-
 ### Requirements
-- Node ^9.3
+- Node ^9.3.*
+
+#### Babel
+- Babel-Core 6.3.*
+- Babel-Loader" 7.*.*
+- Babel-Preset-Env" 1.*.*
+- Babel-Preset-React 6.*.*

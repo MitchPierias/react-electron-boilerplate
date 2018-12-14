@@ -1,14 +1,86 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/** Force App wrapper to bounds *//
+[data-reactroot] {
+	width: 100vw !important;
+	height: 100vh !important;
+	position: relative;
+}
+/** Reset Defaults **/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+	width: 100% !important;
+	height: 100% !important;
+	background-color: #f9f9f9;
+	color: #7f8080;
+	font-family: Montserrat,sans-serif,-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+}
+
+.app {
+	width: 100% !important;
+	height: 100% !important;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+header {
+	flex: 6 1;
+	padding: 3vw;
+}
+
+section {
+	flex: 3 6;
+	padding: 3vw;
+}
+
+footer {
+	flex: 3 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center;
+	padding: 3vw;
+}
+
+h1 {
+	font-size: 1.4em;
+}
+
+h2 {
+	font-size: 1.2em;
+	padding: 2vmin;
+}
+
+small {
+	font-size: 0.8em;
+	display: block;
+	opacity: 0.8;
+}
+
+.link-container {
+	align-self: stretch;
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-content: center;
+}
+
+a, a:link {
+	color: #1bd4a5;
+	text-decoration: none;
+	margin: 2vmin 3vw;
+}
+
+a:visited {
+	color: inherit;
+	text-decoration: inherit;
 }

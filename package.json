@@ -1,9 +1,9 @@
 {
-  "name": "reactron-simple",
+  "name": "reactron",
   "version": "1.0.0",
   "private": false,
   "author": "Mitch Pierias <github.com/MitchPierias>",
-  "description": "Simple Electron with React Project Template",
+  "description": "Simplified Electron with React Boilerplate",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "path": "^0.12.7",
-    "react": "^16.6.3"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -28,6 +29,7 @@
     "webpack-cli": "^3.1.2"
   },
   "build": {
+    "productName":"Reactron",
     "appId": "com.reactron.app",
     "directories": {
       "buildResources": "build",
@@ -35,7 +37,8 @@
     },
     "files": [
       "**/*",
-      "build/**/*"
+      "build/**/*",
+      "node_modules/**/*"
     ]
   },
   "browserslist": [
