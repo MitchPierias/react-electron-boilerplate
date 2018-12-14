@@ -3,7 +3,6 @@ node_modules
 # Production
 build
 dist
-assets/*
 # Misc
 .DS_Store
 .env.local
@@ -16,3 +15,7 @@ yarn-debug.log*
 yarn-error.log*
 # Generated
 package-lock.*
+# Resources
+*.psd
+*/banner.png
+*/favicon.ico
