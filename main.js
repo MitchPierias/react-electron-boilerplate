@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain, shell } = require('electron');
 const path = require('path');
 
 // Main window reference
@@ -34,7 +34,7 @@ app.on('ready', createWindow);
  */
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') app.quit()
-})
+});
 
 /**
  * Application Active
@@ -43,4 +43,13 @@ app.on('window-all-closed', () => {
  */
 app.on('activate', () => {
 	if (mainWindow === null) createWindow()
-})
+});
+
+/**
+ * Open Link
+ * @note Opens the specified link externally in the users default browser.
+ */
+ipcMain.on('link:open', (event, link) => {
+	if ('string' === typeof link && link.length > 0)
+		shell.openExternal(link);
+});

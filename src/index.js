@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// Components
+import Link from './components/Link';
 
 const App = (
 	<div className="app" data-js="app-main">
 		<header className="header" data-js="header-container">
-			<img alt="Logo"/>
-			<h1>Reactron</h1>
+			<img alt="Logo" src="../assets/react.png"/>
+			<span className="sym-add">+</span>
+			<img alt="Logo" src="../assets/electron.png"/>
 		</header>
 		<section>
 			<h2>A Simplified Electron with React Boilerplate Project</h2>
@@ -14,8 +17,8 @@ const App = (
 		</section>
 		<footer className="footer" data-js="footer-container">
 			<div className="link-container" data-js="link-container">
-				<a className="link" data-js="link-medium" href="#">Medium</a>
-				<a className="link" data-js="link-github" href="https://github.com/MitchPierias/Reactron">Github</a>
+				<Link className="link" data-js="link-medium" isExternal={true} href="https://medium.com/@mitchpierias/the-dream-team-react-with-electron-c808ecb5b55e">Medium</Link>
+				<Link className="link" data-js="link-github" isExternal={true} href="https://github.com/MitchPierias/React-Electron-Boilerplate">Github</Link>
 			</div>
 			<span className="caption" data-js="footer-caption">
 				<small>Remember to spread the love!</small>
