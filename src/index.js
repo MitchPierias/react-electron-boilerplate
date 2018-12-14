@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// Components
+import Link from './components/Link';
 
 const App = (
 	<div className="app" data-js="app-main">
@@ -14,8 +16,8 @@ const App = (
 		</section>
 		<footer className="footer" data-js="footer-container">
 			<div className="link-container" data-js="link-container">
-				<a className="link" data-js="link-medium" href="#">Medium</a>
-				<a className="link" data-js="link-github" href="https://github.com/MitchPierias/Reactron">Github</a>
+				<Link className="link" data-js="link-medium" isExternal={true} href="https://medium.com/@mitchpierias/the-dream-team-react-with-electron-c808ecb5b55e">Medium</Link>
+				<Link className="link" data-js="link-github" isExternal={true} href="https://github.com/MitchPierias/Reactron">Github</Link>
 			</div>
 			<span className="caption" data-js="footer-caption">
 				<small>Remember to spread the love!</small>
