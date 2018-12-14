@@ -33,12 +33,22 @@ body {
 }
 
 header {
-	flex: 6 1;
+	flex: 7 1;
 	padding: 3vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.sym-add {
+	font-size: 3em;
+	color: #d2d2d2;
+	margin: 8vw;
 }
 
 section {
-	flex: 3 6;
+	flex: 2 6;
 	padding: 3vw;
 }
 
