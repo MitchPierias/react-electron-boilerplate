@@ -49,5 +49,12 @@ module.exports = {
 	],
 	resolve: {
 		extensions: ['.js','.jsx']
+	},
+	devServer: {
+		filename: 'dev-bundle.js',
+		lazy: true,
+		compress: true,
+		contentBase: path.resolve(__dirname,'build'),
+		port: 9000
 	}
 }
