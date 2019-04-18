@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const webpack, { HotModuleReplacementPlugin } = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
@@ -12,6 +12,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
 	template: "./src/index.html",
 	filename: "./index.html"
 });
+
+const hotModulePlugin = new HotModuleReplacementPlugin();
 
 /**
  * Webpack Configuration
@@ -45,7 +47,8 @@ module.exports = {
 		]
 	},
 	plugins:[
-		htmlPlugin
+		htmlPlugin,
+		hotModulePlugin
 	],
 	resolve: {
 		extensions: ['.js','.jsx']
