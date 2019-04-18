@@ -1,6 +1,9 @@
 const { app, BrowserWindow, ipcMain, shell } = require('electron');
 const path = require('path');
 
+// Constants
+const inDevelopmentMode = (process.env.MODE === 'dev')
+
 // Main window reference
 let mainWindow = null;
 
@@ -14,8 +17,11 @@ function createWindow() {
 		width:600,
 		height:400
 	});
-	// Load our compiled HTML entry file
-	mainWindow.loadFile(path.resolve(__dirname,'build/index.html'));
+	// Display devleoper tools
+	if (inDevelopmentMode)
+		mainWindow.webContents.openDevTools()
+	// Load primary UI
+	mainWindow.loadURL(inDevelopmentMode ? `http://localhost:9000` : `file://${__dirname}/build/index.html`);
 	// Handle 'closed' window event
 	mainWindow.on('closed', () => {
 		if (process.platform !== 'darwin') app.quit();

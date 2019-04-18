@@ -1,4 +1,4 @@
-const webpack, { HotModuleReplacementPlugin } = require('webpack');
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
@@ -13,13 +13,13 @@ const htmlPlugin = new HtmlWebPackPlugin({
 	filename: "./index.html"
 });
 
-const hotModulePlugin = new HotModuleReplacementPlugin();
+const hotModulePlugin = new webpack.HotModuleReplacementPlugin();
 
 /**
  * Webpack Configuration
  */
 module.exports = {
-	entry: './src/index.js',
+	entry: ['webpack/hot/dev-server','./src/index.js'],
 	target: 'electron-renderer',
 	output: {
 		path: path.resolve(__dirname, 'build'),
@@ -52,5 +52,14 @@ module.exports = {
 	],
 	resolve: {
 		extensions: ['.js','.jsx']
+	},
+	devServer: {
+		publicPath:'http://localhost:9000',
+		contentBase: path.join(__dirname, 'assets'),
+		open: false,
+		lazy: false,
+		compress: true,
+		historyApiFallback: true,
+		port: 9000
 	}
 }

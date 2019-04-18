@@ -6,14 +6,17 @@
   "description": "Simplified Electron with React Boilerplate",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "npm start:react",
+    "start:react": "MODE=dev webpack-dev-server --mode development --progress",
+    "start:electron": "MODE=dev electron .",
     "build": "webpack --mode production",
     "dist": "electron-builder"
   },
   "dependencies": {
     "path": "^0.12.7",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "webpack-dev-server": "^3.3.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -29,7 +32,7 @@
     "webpack-cli": "^3.1.2"
   },
   "build": {
-    "productName":"Reactron",
+    "productName": "Reactron",
     "appId": "com.reactron.app",
     "directories": {
       "buildResources": "build",
